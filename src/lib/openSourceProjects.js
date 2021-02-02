@@ -2,7 +2,7 @@ export default [
     {
         "header" : "Minali Reminders",
         "desc" : "Minali Reminders - Android natural language processing reminder app", 
-        "link" : "#",
+        "link" : "https://github.com/rafaelgandi/minali-reminder",
         "image" : "/images/proj/minali.png"
     },
     {
