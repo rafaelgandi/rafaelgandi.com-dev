@@ -1,0 +1,27 @@
+#### Copy contents below to the .env file you created on the root directory ###
+
+
+#----------------------------------------------------------#
+# This is where all the environmental variables are placed #
+#----------------------------------------------------------#
+# REMINDER: After updating this file, make sure to run "yarn start" again.
+
+# Set the base path for sass file @imports
+SASS_PATH=src
+
+# Port where the cra server should listen to.
+# See: https://scriptverse.academy/tutorials/reactjs-change-port-number.html
+PORT=8000
+
+
+# Set the url of the server endpoint 
+REACT_APP_API_URI="http://api.editionguard.dock"
+
+# Complete API endpoint uri
+REACT_APP_API_URI_ENDPOINT="http://api.editionguard.dock/api/v3"
+
+# This will appear on the title tag of the index.html
+REACT_APP_WEBSITE_TITLE="V3.0 Edition Guard"
+
+# Build signal found in index.html
+REACT_APP_BUILD_SIGNAL="local"

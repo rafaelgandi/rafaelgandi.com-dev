@@ -1,0 +1,58 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:react-hooks/recommended",
+        "plugin:react/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "__CURRENT_MODULE_PATH":  "readonly",
+        "AMD":  "readonly",
+        "URLSearchParams":  "readonly",
+        "runwhen":  "readonly",
+        "console":  "readonly",
+        "jQuery":  "readonly",
+        "__import":  "readonly",
+        "require":  "readonly",
+        "process":  "readonly",
+        "React":  "readonly",
+        "__dirname":  "readonly"
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2019,
+        "allowImportExportEverywhere": true,
+        "sourceType": "module"
+    },
+    
+    "rules": {
+        "strict":             [ "error", "safe" ],
+        "no-debugger":        "error",    
+        "keyword-spacing":    "error",
+        "no-var": "warn",
+        "no-undef":           "warn",
+        "no-undefined":       "warn",
+        "comma-dangle":       [ "error", "never" ],
+        "semi":               [ "error", "always" ],        
+        "guard-for-in":       "off",
+        "no-with":            "error",
+        "valid-typeof":       "error",
+        "no-unused-vars":     "warn",
+        "no-continue":        "off",
+        "no-extra-semi":      "warn",
+        "no-unreachable":     "warn",
+        "eqeqeq": "error",
+        "camelcase": "warn",
+        
+        "react/display-name": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": ["warn", {"skipUndeclared": true}]
+    }
+}

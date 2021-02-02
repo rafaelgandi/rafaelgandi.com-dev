@@ -1,0 +1,55 @@
+@import 'sass/util', 'sass/variables';
+
+// See: https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe
+.grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    @include media-breakpoint-up(xs) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .grid-item {
+        padding: 1rem;  
+        a {
+            display: block;
+            .img-con {
+                height: 157px;
+                overflow: hidden;
+                margin: 0 auto;	
+                vertical-align: middle; 
+                position: relative; 
+                img {
+                    display: block;
+                    max-width: 100%;
+                    min-width: 100px;
+                    max-height: 150px;
+                    margin: 0 auto;
+                    border:0;
+                    position: absolute;
+                    bottom: 3px;
+                    left: 0;
+                    right: 0;
+                }
+            }            
+            .desc {
+                font-size: 0.8em;
+                padding-top: 10px;
+                margin: 0 auto;
+                width: 90%;
+                text-align: center;
+            }
+            &:hover {
+                color: #000;
+            }
+        }
+        
+    }
+}
+

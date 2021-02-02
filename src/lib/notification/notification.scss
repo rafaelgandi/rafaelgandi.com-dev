@@ -1,0 +1,12 @@
+
+@import './notyf.min';
+
+.notification-con {
+    padding: 0 20px;
+}
+
+.notyf { // Make toast appear at the upper right
+    top: 20px;
+    right: 30px;
+    bottom:auto;
+}

@@ -1,0 +1,87 @@
+
+
+.notification-con {
+    padding: 0 18px;
+}
+
+:global(.notyf) { // Make toast appear at the upper right
+    // top: 20px;
+    // right: 30px;
+    // bottom:auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    pointer-events: none;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+:global {
+
+    @import 'sass/variables';
+
+    .notyf__toast {
+        bottom: 0;
+        display: flex;
+        font-size: 14px;
+        border-radius: 5px;
+        box-shadow: none;
+        max-width: 340px;
+
+        &:first-child {
+            margin-top: 55px;
+        }
+    }
+
+
+    .notyf__toast--dismissible {
+        .notyf__wrapper {
+            padding-right: 20px !important;
+        }
+    }
+
+    .notyf__icon {
+        font-size: 20px;
+        font-family: 'eg-icons';
+        width: 20px;
+
+        .notyf__icon--success {
+            background: transparent;
+
+            &:before,
+            &:after {
+                height: unset;
+                top: unset;
+                left: 0;
+                width: 0;
+                transform: none;
+            }
+
+            &:before {
+                content: "\e919";
+                color: $white;
+            }
+
+            &:after {
+                content: "";
+            }
+        } 
+    }
+
+    .notyf__dismiss-btn {
+        background-color: transparent;
+        outline: none !important;
+    }
+
+    .notyf__message {
+        line-height: 17px;
+    }
+}

@@ -1,0 +1,9 @@
+// Component styles go here
+ @import 'sass/base';
+ 
+ #pages-wrapper {
+    margin-top: 200px;
+    @include media-breakpoint-down(md) {
+        margin-top: 100px;
+    }
+}    

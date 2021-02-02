@@ -1,0 +1,30 @@
+ @import 'sass/util';
+ @import 'sass/variables';
+ 
+#email-container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 5em;
+    margin-top: 96px;
+    a {
+        text-decoration: none;  
+        transition: background-color 0.5s ease-out;
+        padding: 10px 20px;
+        &:hover {
+            background-color: $accent-color;
+            color: $dark-font-color;
+            
+        }
+    }
+    @include media-breakpoint-down(md) {
+        font-size: 1.2em;
+        margin-top: 75px;
+        a {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+        }
+    }
+}

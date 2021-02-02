@@ -1,0 +1,51 @@
+
+@import 'util', 'variables';
+
+html {
+    /* See: https://developers.google.com/web/updates/2013/12/300ms-tap-delay-gone-away */
+    touch-action: manipulation;
+    &.desktop, .desktop body { 
+        overflow: hidden;
+        width: 100%;
+    }
+    .left {float:left;}
+    .right {float:right;}
+    .clr {clear:both; font-size:0; }  
+    .hide {display: none;}
+    
+    ::selection {
+        background: $accent-color; /* WebKit/Blink Browsers */
+    }
+    ::-moz-selection {
+        background: $accent-color; /* Gecko Browsers */
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;	
+        font-family: $font-family;
+        position: relative;
+        transition: opacity 0.5s ease-out;
+        opacity: 0;
+        color: $dark-font-color;
+        * {
+            box-sizing: border-box;	
+        }        
+        a, a:link, a:active, a:visited { 
+            outline: none;
+            color:  $link-normal-color; 
+            text-decoration: none;
+            transition: color 0.3s ease-out, opacity 0.3s ease-out;
+        }
+        a:hover { 
+            color: $link-highlight-color;
+        }
+        a:link { 
+            -webkit-tap-highlight-color: transparent; 
+        }
+        hr {
+            margin-top: 5rem;
+        }
+    }
+}

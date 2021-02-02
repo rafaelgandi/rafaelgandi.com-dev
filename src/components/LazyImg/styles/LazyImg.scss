@@ -1,0 +1,34 @@
+
+@keyframes pulse {
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}     
+
+.pulsate {
+    /* See: https://cloudcannon.com/deconstructions/2014/11/15/facebook-content-placeholder-deconstruction.html */
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: pulse;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    width: 100%;
+    height: 100%;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.img-container {
+    box-sizing: border-box;
+    img {
+        transition: opacity 1s ease-in-out;
+    }
+}

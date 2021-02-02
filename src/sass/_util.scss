@@ -1,0 +1,96 @@
+@mixin blur($radius) {
+    -webkit-filter: blur($radius); /* Chrome, Safari */
+    -ms-filter: blur($radius); /* IE12? */
+    filter: url("data:image/svg+xml;utf8,<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"blur\"><feGaussianBlur stdDeviation=\"#{$radius}\" /></filter></svg>#blur"); /* Firefox, Safari, Chrome*/
+    filter: progid:DXImageTransform.Microsoft.Blur(Strength=$radius); /* IE9 */
+    filter: blur($radius);
+}
+
+@mixin content-columns($columnCount, $columnGap) {  
+    -webkit-column-count: $columnCount;
+    -moz-column-count: $columnCount;
+    column-count: $columnCount;
+    -webkit-column-gap: $columnGap;
+    -moz-column-gap: $columnGap;
+    column-gap: $columnGap;
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin box-shadow( $horiz, $vert, $blur, $spread, $color){
+  -webkit-box-shadow: $horiz $vert $blur $spread $color;
+  -moz-box-shadow: $horiz $vert $blur $spread $color;
+  box-shadow: $horiz $vert $blur $spread $color;
+}
+
+@mixin small-shadow() {
+    @include box-shadow(2px, 3px, 6px, 0px, rgba(0,0,0,0.5));
+}
+@mixin no-user-select() {
+    // See: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+// See: https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints
+@mixin media-breakpoint-up($size) {
+    @if $size == 'xs' {
+        // Extra small devices (portrait phones, less than 576px)
+        // No media query since this is the default in Bootstrap
+        @content;
+    } 
+    @elseif $size == 'sm' {
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) { @content; }
+    }
+    @elseif $size == 'md' {
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { @content; }
+    }
+    @elseif $size == 'lg' {
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) { @content; }
+    }
+    @elseif $size == 'xl' {
+        // Extra large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) { @content; }
+    }
+}
+
+@mixin media-breakpoint-down($size) {
+    @if $size == 'xs' {
+        // Extra small devices (portrait phones, less than 576px)
+        @media (max-width: 575.98px) { @content; }
+    } 
+    @elseif $size == 'sm' {
+        // Small devices (landscape phones, less than 768px)
+        @media (max-width: 767.98px) { @content; }
+    }
+    @elseif $size == 'md' {
+        // Medium devices (tablets, less than 992px)
+        @media (max-width: 991.98px) { @content; }
+    }
+    @elseif $size == 'lg' {
+        // Large devices (desktops, less than 1200px)
+        @media (max-width: 1199.98px) { @content; }
+    }
+    @elseif $size == 'xl' {
+        // Extra large devices (large desktops)
+        // No media query since the extra-large breakpoint has no upper bound on its width
+        @content;
+    }
+}
+
+
+
