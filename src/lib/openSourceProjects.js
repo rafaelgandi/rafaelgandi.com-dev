@@ -8,13 +8,19 @@ export default [
     {
         "header" : "RunWhen",
         "desc" : "RunWhen - Javascript code dependency checker.", 
-        "link" : "http://rafaelgandi.github.io/RunWhen",
+        "link" : "https://github.com/rafaelgandi/RunWhen",
         "image" : "/images/proj/runwhen.jpg"
     },
     {
         "header" : "Monthlyst",
         "desc" : "Monthlyst - My simple personal monthly todo list android app.", 
-        "link" : "http://rafaelgandi.github.io/monthlyst",
+        "link" : "https://github.com/rafaelgandi/monthlyst",
         "image" : "/images/proj/monthlyst.png"
+    },
+    {
+        "header" : "Habitrac",
+        "desc" : "Habitrac - A phonegap android app to track my habits and report with a pie chart.", 
+        "link" : "https://github.com/rafaelgandi/Habitrac",
+        "image" : "/images/proj/habitrac.png"
     }
 ];
