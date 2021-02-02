@@ -27,7 +27,7 @@ yarn-error.log*
 
 
 .vscode
-.env
+#.env
 .env.staging
 .env.production
 .env.backup
