@@ -13,6 +13,7 @@ import HomePage from 'components/HomePage';
 const WebDevPage = React.lazy(() => import('components/WebDevPage'));
 const ContactPage = React.lazy(() => import('components/ContactPage'));
 const MapPage = React.lazy(() => import('components/MapPage')); 
+const Photography = React.lazy(() => import('components/Photography')); 
 
 const App = () => {
     useFirstRender(() => {
@@ -24,6 +25,7 @@ const App = () => {
                 <BrowserRouter>
                     <Switch>
                         <Route path={ constants.routes.home } component={ HomePage } exact />
+                        <Route path={ constants.routes.photography } component={ Photography } exact />
                         <Route path={ constants.routes.webDevelopment } component={ WebDevPage } exact />                
                         <Route path={ constants.routes.contact } component={ ContactPage } exact />                
                         <Route path={ constants.routes.map } component={ MapPage } exact />                
