@@ -16,8 +16,6 @@ export default function Header(props) {
     });
     const links = [
         { link: constants.routes.home, linkLabel: 'Me' },
-        { link: constants.uri.medium, linkLabel: 'Blog', external: true },
-        //{ link: constants.uri.googlePhotosPage, linkLabel: 'Photography', external: true },
         { link: constants.routes.photography, linkLabel: 'Photography' },
         { link: constants.routes.webDevelopment, linkLabel: 'Web Development' },
         { link: constants.routes.contact, linkLabel: 'Contact' }

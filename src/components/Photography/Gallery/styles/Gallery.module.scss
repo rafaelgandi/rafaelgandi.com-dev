@@ -1,5 +1,7 @@
 // Component styles go here
 
+@import 'sass/util';
+
 .photo {
     width: 100%;
 }
@@ -7,4 +9,6 @@
 .photoCon {
     //border: 1px solid red;
     min-height: 250px;
+    margin: 5px;
+   
 }
