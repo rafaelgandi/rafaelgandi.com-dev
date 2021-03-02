@@ -1,0 +1,12 @@
+
+@import 'sass/util';
+
+.ashtonsDrawing {
+    width: 80px; 
+    opacity: 0.6;
+    display: block;
+    margin: 0 auto;
+    @include media-breakpoint-up(md) {
+        margin-top: 100px;
+    }
+}

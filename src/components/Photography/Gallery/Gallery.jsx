@@ -12,6 +12,7 @@ import LazyImg from 'components/LazyImg';
 
 const columnsCountBreakPoints = { 350: 1, 900: 2 };
 
+Masonry.propTypes.gutter = PropTypes.any; // Hack needed to fix Masonry bug.
 
 export default function Gallery({ photos }) {
     useEffect(() => {
@@ -28,7 +29,7 @@ export default function Gallery({ photos }) {
     });
     return (
         <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
-            <Masonry>
+            <Masonry gutter={5}>
                 {photos.map((image) => {
                     if (!image) { return null; }
                     return (

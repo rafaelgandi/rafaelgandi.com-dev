@@ -9,6 +9,14 @@
 .photoCon {
     //border: 1px solid red;
     min-height: 250px;
-    margin: 5px;
    
+}
+
+:global(.sl-overlay) {
+    opacity: 1 !important;
+}
+
+:global(.sl-image) {
+    @include small-shadow();
+    border: 10px solid #fff !important;
 }
