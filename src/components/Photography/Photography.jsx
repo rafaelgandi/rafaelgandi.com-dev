@@ -5,7 +5,7 @@ import Layout from 'components/Layout';
 import PageSection from 'components/PageSection';
 import Gallery from './Gallery';
 import constants from 'lib/constants';
-import photos from './current-photos';
+import photos from './current-photos'; 
 
 
 export default function Photography(props) {
