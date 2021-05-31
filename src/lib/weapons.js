@@ -36,12 +36,6 @@ export default [
         'header': 'MySQL Relational Database'
     },
     {
-        'link': 'https://graphql.org/',
-        'image': 'images/weapons/graphql.svg',
-        'desc': 'GraphQL',
-        'header': 'GraphQL'
-    },
-    {
         'link': 'http://www.w3.org/html/logo/',
         'image': 'images/weapons/html5.svg',
         'desc': 'HTML5',
